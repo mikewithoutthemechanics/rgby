@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ─── Custom theme tokens ─── */
+@theme {
+  --color-accent-green:  #10B981;
+  --color-accent-indigo: #6366F1;
+  --color-accent-amber:  #F59E0B;
+  --color-accent-red:    #EF4444;
+  --color-surface-1:     #08090c;
+  --color-surface-2:     #0f1117;
+  --color-border:        rgba(255, 255, 255, 0.07);
+  --color-text:          #f0f0f5;
+  --color-muted:         #6b7280;
+}
+
+/* ─── Utilities (non-tailwind) ─── */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse 760px 540px at 20% -10%, rgba(99,102,241,.18), transparent),
+    radial-gradient(ellipse 720px 540px at 80% 110%, rgba(6,182,212,.12), transparent);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 99px;
+}
+.tag-live  { background: rgba(16,185,129,.15); color: #10B981; border: 1px solid rgba(16,185,129,.25); }
+.tag-wip   { background: rgba(245,158,11,.15);  color: #F59E0B; border: 1px solid rgba(245,158,11,.25); }
+.tag-down  { background: rgba(239,68,68,.15);   color: #EF4444; border: 1px solid rgba(239,68,68,.25); }
+.tag-beta  { background: rgba(99,102,241,.15);  color: #6366F1; border: 1px solid rgba(99,102,241,.25); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 99px; }
